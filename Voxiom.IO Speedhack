@@ -1,0 +1,7 @@
+// Simple speedhack I wrote in a few minutes
+// It just spoofs the time between frames
+
+// You can run this by pasting it into your console (CTRL-Shift-I)
+(o=>requestAnimationFrame=f=>o(t=>f(t*1.75)))(requestAnimationFrame);
+
+// If you're on Chrome you can type `javascript:` into your URL bar and paste in the above code.
