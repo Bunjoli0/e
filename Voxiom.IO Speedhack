@@ -1,7 +1,11 @@
 // Simple speedhack I wrote in a few minutes
-// It just spoofs the time between frames
+
+// Update: this new one has worked for a couple months although the game developer has been given it so it will be patched soon.
+(original => Date.now = () => original() * 2)(Date.now);
 
 // You can run this by pasting it into your console (CTRL-Shift-I)
-(o=>requestAnimationFrame=f=>o(t=>f(t*1.75)))(requestAnimationFrame);
-
 // If you're on Chrome you can type `javascript:` into your URL bar and paste in the above code.
+
+// Extra information:
+// v1: requestAnimationFrame deltaTime spoofing, max 175% speedup
+// v2: Date.now spoofing, max 200% speedup
