@@ -10,6 +10,5 @@
 (original => (Date.now = () => original() * 2).toString = () => "function now() {\n    [native code]\n}")(Date.now);
 
 //v3 : performance.now not for voxiom
-(original => (performance.now = () => original() * 2).toString = () => "function now() {\n    [native code]\n}")(Date.now);
-
+(original => performance.now = () => original() * 2)(Date.now);
 // Special appreciation to those the people that choose to plagiarize, the parasites of every community.
